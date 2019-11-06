@@ -1,0 +1,367 @@
+/*
+Theme Name:     Paulo Velho 20
+Theme URI:      http: //blog.paulovelho.com
+Description:    Template para o blog.paulovelho.com
+Author:         Paulo Henrique Martins
+Author URI:     http: //blog.paulovelho.com
+Template:       twentynineteen
+Version:        1.0 beta
+*/
+
+
+/* PAULO VELHO ADDITIONS */
+
+@media only screen and (max-width: 991px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
+
+.widget_facebookactivityfeed{
+	width: 220px;
+}
+
+/* ############## HEADER ################ */
+header.site-header {
+	padding: 0;
+	margin-top: 20px;
+}
+
+@media (max-width: 860px) {
+  #site-image-title.pv-header {
+    display: none;
+  }
+}
+
+h1#site-title {
+	position: absolute;
+	font-size: 2rem;
+	width: 250px;
+	margin-top: 30px;
+}
+h1#site-title :before {}
+#site-image-title{
+	position: relative;
+	margin-left: 350px;
+	z-index: 99;
+}
+hgroup#header-title {
+	margin: 10px auto;
+	max-width: 80%;
+	height: 150px;
+}
+
+
+.wp-caption {
+	padding: 4px;
+	-moz-box-shadow: 3px 2px 5px 2px #666;
+	-webkit-box-shadow: 3px 2px 5px 2px #666;
+	box-shadow: 3px 2px 5px 2px #666;
+	border: 1px solid #999;
+}
+.wp-caption .wp-caption-text {
+	margin-bottom: 0.6em;
+	padding: 5px;
+	text-align:center;
+}
+.wp-caption .wp-caption-text:before {
+	display: none;
+}
+
+#site-generator {
+	padding: 10px 0.5em;
+}
+
+/* ############## MENU ################ */
+.main-navigation > div {
+  max-width: 80%;
+  margin: 0 auto;
+  display: block !important;
+}
+
+.main-navigation ul.pv-main-menu {
+	font-size: 1rem;
+	list-style: none;
+	margin: 0 0 0 -0.8125em;
+	padding-left: 0;
+}
+
+.main-navigation ul.pv-main-menu li {
+	float: left;
+	position: relative;
+	color: #FFF;
+	height: 50px;
+}
+
+.main-navigation ul.pv-main-menu li a {
+	color: #EEE;
+	display: block;
+	line-height: 2.5em;
+	padding: 0 1.2125em;
+	text-decoration: none;
+}
+.main-navigation ul.pv-main-menu li a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+.main-navigation .submenu-expand {
+	display: none !important;
+}
+
+.main-navigation ul.pv-main-menu ul {
+	background-color: #EEE;
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	float: left;
+	margin: 0;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 188px;
+	z-index: 99999;
+}
+.main-navigation ul.pv-main-menu ul li {
+	color: #222;
+	display: block;
+	float: none;
+}
+.main-navigation ul.pv-main-menu ul li a {
+	color: #444;
+}
+.main-navigation ul.pv-main-menu ul.submenu li a:hover {
+	background: #AAA;
+}
+.main-navigation ul.pv-main-menu ul li button.menu-item-link-return {
+	color: #222;
+}
+
+
+
+
+/* new headers*/
+nav#site-navigation {
+	width: 100%;
+	height: 50px;
+}
+
+#site-navigation {
+	background: -moz-linear-gradient(#000, #943e05);
+	background: -o-linear-gradient(#000, #943e05);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000), to(#943e05)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#000, #943e05);
+}
+
+#site-navigation.pv_london2012{
+	background: -moz-linear-gradient(#000099, #FF0000);
+	background: -o-linear-gradient(#000099, #FF0000);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000099), to(#FF0000)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#000099, #FF0000);
+}
+
+#site-navigation.pv_long-reads{
+	background: -moz-linear-gradient(#a444c4, #370149);
+	background: -o-linear-gradient(#a444c4, #370149);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#a444c4), to(#FF0000)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#a444c4, #370149);
+}
+
+#site-navigation.pv_pessoal{
+	background: -moz-linear-gradient(#FF6600, #882200);
+	background: -o-linear-gradient(#FF6600, #882200);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FF6600), to(#882200)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#FF6600, #882200);
+}
+
+#site-navigation.pv_divago{
+	background: -moz-linear-gradient(#558822, #005511);
+	background: -o-linear-gradient(#558822, #005511);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#558822), to(#005511)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#558822, #005511);
+}
+
+#site-navigation.pv_twitter{
+	background: -moz-linear-gradient(#2fbede, #122255);
+	background: -o-linear-gradient(#2fbede, #122255);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2fbede), to(#122255)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#2fbede, #122255);
+}
+
+#site-navigation.pv_rabiscos{
+	background: -moz-linear-gradient(#AAAAAA, #333333);
+	background: -o-linear-gradient(#AAAAAA, #333333);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#AAAAAA), to(#333333)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#AAAAAA, #333333);
+}
+
+
+/* OTHER STRUCTURES */
+.long_read {
+	background-color: #EEE;
+	border: 1px solid #444;
+	color: #444;
+	padding: 10px;
+	margin: 10px 10px 20px;
+	float: left;
+	display: inline-flex;
+}
+.long_read__desc {
+	display: inline-block;
+	float: left;
+	margin-left: 10px;
+}
+.long_read img {
+	display: inline-block;
+	width: 200px;
+	height: 300px;
+	float: left;
+	max-width: none;
+}
+.long_read h3 {
+	font-size: 20px;
+	line-height: 30px;
+	font-variant: small-caps;
+	font-weight: bold;	
+}
+.long_read h4{
+	font-size: 16px;
+}
+
+.more_info {
+	background-color: #CCCCCC;
+	border: 1px solid #666666;
+	color: #444;
+	padding: 10px;
+	margin: 10px 10px 20px;
+}
+.more_info h3{
+	background-color: #666666;
+	color: #FFFFFF;
+	font-size: 20px;
+	font-variant: small-caps;
+	font-weight: bold;
+	height: 25px;
+	text-align: center;
+}
+.more_info h4{
+	font-size: 16px;
+	font-variant: small-caps;
+	font-weight: bold;
+}
+.more_info a{
+	text-decoration: underline;
+}
+.quadro_aviso {
+	background-color: #CCCCCC;
+	border: 1px solid #666666;
+	color: #444;
+	padding: 10px;
+	margin: 10px 10px 20px;
+}
+#vilao_especialmente_convidado {
+	background-color: #CCCCCC;
+	border: 1px solid #666666;
+	color: #444;
+	width: 550px;
+	float: left;
+}
+#vilao_especialmente_convidado #vilao_title {
+	background-color: #666666;
+	color: #CCCCCC;
+	height: 20px;
+	padding-left: 50px;
+	vertical-align: bottom;
+}
+#vilao_especialmente_convidado #vilao_name {
+	background-color: #666666;
+	color: #FFFFFF;
+	font-size: 20px;
+	font-variant: small-caps;
+	font-weight: bold;
+	height: 25px;
+	text-align: center;
+}
+#vilao_especialmente_convidado img{
+	float: left;
+	height: 150px;
+	text-align: left;
+	width: 150px;
+	margin: 10px;
+	border: 1px solid #666666;
+}
+#vilao_especialmente_convidado a{
+	color: #000;
+}
+#vilao_especialmente_convidado span{
+	background-image: none;
+	float:left;
+	height: 0;
+	width: 0;
+}
+#vilao_especialmente_convidado #vilao_desc {
+	text-align: left;
+	font-size: 12px;
+}
+
+/* TWITTER WIDGET */
+.twtr-ft a{display:none !important;}
+.twtr-ft{height: 1px !important;}
+.twtr-hd{height: 31px;}
+.twtr-hd h3{display:none !important;}
+.twtr-hd h4{padding-left: 10px; position: absolute;}
+.twtr-hd h4:before{content: '@';}
+
+.pv_date {
+	width:60px;
+	height:60px;
+	text-align:center;
+	color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	border: 1px solid black;
+	background-color: #F22;
+}
+.pv_date_transparency{
+	width:60px;
+	height:60px;
+	background: url(images/pv_calendar_opacity.png) no-repeat;
+	position: absolute;
+}
+.pv_date .pv_date-day {
+	color:#333;
+	height: 25px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:35px;
+	background-color: #FFF;
+	width: 56px;
+	padding-top: 3px;
+	margin-left: 2px;
+}
+.pv_date .pv_date-month {
+	font-size:11px;
+	height: 15px;
+	font-weight:bold;
+}
+.pv_date .pv_date-year {
+	color:#333;
+	font-size:10px;
+	font-weight:bold;
+	height: 15px;
+	background-color: #FFF;
+	width: 56px;
+	margin-left: 2px;
+}
+
+.pv_date.date_pessoal{
+	background-color: #FF6600;
+}
+.pv_date.date_twitter{
+	background-color: #2fbede;
+}
+.pv_date.date_rabiscos{
+	background-color: #333333;
+}
+.pv_date.date_divago{
+	background-color: #005511;
+}
