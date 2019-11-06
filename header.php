@@ -19,43 +19,35 @@
 	<?php wp_head(); ?>
 </head>
 
-<?php
-add_filter('body_class','pv_body_class');
-function pv_body_class($classes) {
-	// add 'class-name' to the $classes array
-	$classes[] = "body_".pv_getSchema();
-// add more classes:
-//	$classes[] = "temporal2";
-	// return the $classes array
-	return $classes;
-}
-?>
-
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentynineteen' ); ?></a>
 
-		<header id="masthead" class="site-header">
+		<header id="masthead" class="<?php echo is_singular() && twentynineteen_can_show_post_thumbnail() ? 'site-header featured-image' : 'site-header'; ?>">
 
-			<hgroup id="header-title">
-				<h1 id="site-title" class="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
-				<?php pv_headerImage(); ?>
-				<!--h2 id="site-description"><?php bloginfo( 'description' ); ?></h2-->
-			</hgroup>
+			<div class="site-branding-container">
+				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
+			</div><!-- .site-branding-container -->
 
-			<nav id="site-navigation" class="main-navigation pv_<?php pv_getSchema(); ?>" aria-label="<?php esc_attr_e( 'Top Menu', 'twentynineteen' ); ?>">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_class'     => 'main-menu pv-main-menu',
-						'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-					)
-				);
-				?>
-			</nav><!-- #site-navigation -->
+			<?php if ( is_singular() && twentynineteen_can_show_post_thumbnail() ) : ?>
+				<div class="site-featured-image">
+					<?php
+						twentynineteen_post_thumbnail();
+						the_post();
+						$discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentynineteen_get_discussion_data() : null;
 
+						$classes = 'entry-header';
+					if ( ! empty( $discussion ) && absint( $discussion->responses ) > 0 ) {
+						$classes = 'entry-header has-discussion';
+					}
+					?>
+					<div class="<?php echo $classes; ?>">
+						<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
+					</div><!-- .entry-header -->
+					<?php rewind_posts(); ?>
+				</div>
+			<?php endif; ?>
 		</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
