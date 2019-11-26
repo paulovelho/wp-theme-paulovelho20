@@ -21,7 +21,21 @@ Version:        1.0 beta
 	section {
 		padding: 0 0 8rem 0 !important;
 	}
+	.footer-widgets {
+		display: block;
+		float: left;
+		width: 100%;
+	}
+	.footer-widgets .widget {
+		margin: 0;
+		padding: 0 15px;
+		float: left;
+		width: 33%;
+		display: block;
+	}
 }
+
+
 
 blockquote {
 	font-size: 0.9em;
