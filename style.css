@@ -4,7 +4,7 @@ Theme URI:      http: //blog.paulovelho.com
 Description:    Template para o blog.paulovelho.com
 Author:         Paulo Henrique Martins
 Author URI:     http: //blog.paulovelho.com
-Template:       twentynineteen
+Template:       twentytwenty
 Version:        1.0 beta
 */
 
@@ -15,6 +15,22 @@ Version:        1.0 beta
   .hidden-mobile {
     display: none;
   }
+}
+
+@media (min-width: 700px) {
+	section {
+		padding: 0 0 8rem 0 !important;
+	}
+}
+
+blockquote {
+	font-size: 0.9em;
+}
+
+
+.entry-content cite, .entry-content figcaption, .entry-content .wp-caption-text {
+	text-align: right;
+	margin-top: 5px;
 }
 
 .widget_facebookactivityfeed{
@@ -36,9 +52,9 @@ Version:        1.0 beta
 	background-color: #EEE;
 	border: 1px solid #444;
 	color: #444;
+	max-width: 100rem;
 	padding: 10px;
-	margin: 10px 10px 20px;
-	float: left;
+	margin: 0 auto;
 	display: inline-flex;
 }
 .long_read__desc {
@@ -70,17 +86,19 @@ Version:        1.0 beta
 	border: 1px solid #666666;
 	color: #444;
 	padding: 10px;
-	margin: 10px 10px 20px;
+	margin: 0 auto;
 }
 .more_info h1:before, 
 .more_info h2:before {
 	content: none;
 }
 .more_info h1 {
-	font-size: 1.3rem;
+	font-size: 1.3em;
+	margin: 0 10px;
 }
 .more_info h2 {
-	font-size: 1rem;
+	font-size: 1em;
+	margin: 20px 50px 5px;
 }
 .more_info h3{
 	background-color: #666666;

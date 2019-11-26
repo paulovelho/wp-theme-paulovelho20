@@ -2,56 +2,60 @@
 /**
  * The template for displaying the footer
  *
- * Contains the closing of the #content div and all content after.
+ * Contains the opening of the #site-footer div and all content after.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Twenty_Nineteen
+ * @subpackage Twenty_Twenty
  * @since 1.0.0
  */
 
 ?>
+			<footer id="site-footer" role="contentinfo" class="header-footer-group">
 
-	</div><!-- #content -->
+				<div class="section-inner">
 
-	<footer id="colophon" class="site-footer">
-		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
-		<div class="site-info">
-			<?php $blog_info = get_bloginfo( 'name' ); ?>
-			<?php if ( ! empty( $blog_info ) ) : ?>
-				<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>,
-			<?php endif; ?>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentynineteen' ) ); ?>" class="imprint">
-				<?php
-				/* translators: %s: WordPress. */
-				printf( __( 'Proudly powered by %s =)', 'twentynineteen' ), 'WordPress' );
-				?>
-			</a>
-			<?php
-			if ( function_exists( 'the_privacy_policy_link' ) ) {
-				the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
-			}
-			?>
-			<?php if ( has_nav_menu( 'footer' ) ) : ?>
-				<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'twentynineteen' ); ?>">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'footer',
-							'menu_class'     => 'footer-menu',
-							'depth'          => 1,
-						)
-					);
-					?>
-				</nav><!-- .footer-navigation -->
-			<?php endif; ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+					<div class="footer-credits">
 
-</div><!-- #page -->
+						<p class="footer-copyright">&copy;
+							<?php
+							echo date_i18n(
+								/* translators: Copyright date format, see https://secure.php.net/date */
+								_x( 'Y', 'copyright date format', 'twentytwenty' )
+							);
+							?>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo bloginfo( 'name' ); ?></a>
+						</p><!-- .footer-copyright -->
 
-<?php wp_footer(); ?>
+						<p class="powered-by-wordpress">
+							<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentytwenty' ) ); ?>">
+								<?php _e( 'Powered by WordPress', 'twentytwenty' ); ?>
+							</a>
+						</p><!-- .powered-by-wordpress -->
 
-</body>
+					</div><!-- .footer-credits -->
+
+					<a class="to-the-top" href="#site-header">
+						<span class="to-the-top-long">
+							<?php
+							/* translators: %s: HTML character for up arrow */
+							printf( __( 'To the top %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
+							?>
+						</span><!-- .to-the-top-long -->
+						<span class="to-the-top-short">
+							<?php
+							/* translators: %s: HTML character for up arrow */
+							printf( __( 'Up %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
+							?>
+						</span><!-- .to-the-top-short -->
+					</a><!-- .to-the-top -->
+
+				</div><!-- .section-inner -->
+
+			</footer><!-- #site-footer -->
+
+		<?php wp_footer(); ?>
+
+	</body>
 </html>
