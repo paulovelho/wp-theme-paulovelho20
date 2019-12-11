@@ -88,6 +88,7 @@ blockquote {
 	line-height: 30px;
 	font-variant: small-caps;
 	font-weight: bold;	
+	margin-top: 2rem;
 }
 .long_read h4{
 	font-size: 16px;
@@ -122,6 +123,7 @@ blockquote {
 	font-weight: bold;
 	height: 25px;
 	text-align: center;
+	margin-top: 2rem;
 }
 .more_info h4{
 	font-size: 16px;
