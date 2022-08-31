@@ -83,6 +83,10 @@ blockquote {
 	float: left;
 	max-width: none;
 }
+.long_read img.square-img {
+	width: 200px;
+	height: 200px;
+}
 .long_read h3 {
 	font-size: 20px;
 	line-height: 30px;
